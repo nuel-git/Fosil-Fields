@@ -37,6 +37,11 @@ a {
 }
 
 /* Mobile first styles */
+* {
+    scrollbar-width:thin;
+    scroll-behavior:smooth;
+}
+
 body {
     font-family: Avenir;
     color: var(--primary-color);
@@ -54,7 +59,6 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--accent-color);
-    font-weight: 100;
     position: sticky;
     top: 0px;
     flex-wrap: nowrap;
@@ -96,6 +100,8 @@ header button {
     padding: 10px 20px;
     border-radius: 100px;
     margin-top: 20px;
+    text-wrap: nowrap;
+    width: max-content;
 }
 
 .features {
@@ -143,7 +149,7 @@ header button {
 
 .ftc-item {
     color: #008000;
-    text-wrap: nowrap;
+    /* text-wrap: nowrap; */
 }
 
 .footer-content ul li {
@@ -153,6 +159,10 @@ header button {
 
 .footer-content div ul {
     list-style-type: none;
+}
+
+.ftci-number-hyperlink {
+    text-decoration: underline;
 }
 
 .ftci-icons-wrapper {
@@ -175,6 +185,10 @@ header button {
 
 .footer div {
     margin-bottom: 20px;
+}
+
+.footer div:last-child {
+    margin-bottom: 0;
 }
 
 .brand-text {
@@ -208,7 +222,7 @@ header button {
 }
 
 .fbtm-des-text {
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 .fbtm-text {
@@ -217,7 +231,7 @@ header button {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1em;
+    font-size: 0.5em;
 }
 
 
@@ -265,5 +279,29 @@ header button {
 @media screen and (min-width:1024px){
     body {
         font-size: 20px;
+    }
+
+    .section {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .header {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .header * {
+        grid-column: 1/12;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 60px;
+    }
+
+    .features div{
+        grid-column: span 6;
     }
 }
