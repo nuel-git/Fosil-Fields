@@ -45,7 +45,7 @@ a {
 body {
     font-family: Avenir;
     color: var(--primary-color);
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .section {
@@ -239,7 +239,7 @@ header button {
 
 @media screen and (min-width:768px){
     body {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .features {
@@ -278,7 +278,7 @@ header button {
 
 @media screen and (min-width:1024px){
     body {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .section {
